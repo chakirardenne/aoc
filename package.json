@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn years/2015/day1.ts",
+    "start": "ts-node-dev --respawn years/2015/day2/day2.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

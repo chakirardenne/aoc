@@ -1,6 +1,6 @@
-import { readInputFileForDay } from "../../utils";
+import { readInputFileForDay } from "../../../utils";
 
-export let partOne = (content: string) => {
+let partOne = (content: string) => {
     let floor: number = 0;
     content.split(``).forEach(char => {
         if(char == "(")
@@ -11,7 +11,7 @@ export let partOne = (content: string) => {
     return floor;
 }
 
-export let partTwo = (content: string) => {
+let partTwo = (content: string) => {
     let floor: number = 0;
     let splitContent: string[] = content.split(``);
     for (let i = 0; i < splitContent.length; i++) {
@@ -25,3 +25,4 @@ export let partTwo = (content: string) => {
 }
 
 console.log(partOne(readInputFileForDay("2015", "1")));
+console.log(partTwo(readInputFileForDay("2015", "1")));
