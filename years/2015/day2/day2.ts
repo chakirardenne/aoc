@@ -33,7 +33,8 @@ let getRibbonSize = (box: Box) => {
 }
 
 let wrapRibbonSize = (box: Box): number => {
-    return 2 * (box.length +  box.width);
+    let values: number[] = Object.values(box).sort((n1,n2) => n1 - n2);
+    return 2*(values[0] + values[1]);
 }
 let getBoxSize = (box: Box): number => {
     return 2 * box.length * box.width
@@ -43,8 +44,10 @@ let getBoxSize = (box: Box): number => {
 }
 
 let smallestSide = (box: Box): number => {
-    return Math.min(Math.min(box.width * box.length, box.length * box.height), box.height * box.width);
+    return Math.min(box.width * box.length, box.length * box.height, box.height * box.width);
 }
 
 console.log(partOne(readInputFileForDay("2015", "2")));
 console.log(partTwo(readInputFileForDay("2015", "2")));
+
+
